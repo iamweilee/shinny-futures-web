@@ -2,7 +2,7 @@ import Vue from 'vue'
 import TQSDK from 'tqsdk'
 
 let tqsdk = new TQSDK({
-	symbolsServerUrl: 'https://openmd.shinnytech.com/t/md/symbols/latest.json',
+	symbolsServerUrl: '/t/md/symbols/latest.json',
 	wsQuoteUrl: 'wss://openmd.shinnytech.com/t/md/front/mobile',
 	wsTradeUrl: 'wss://t.shinnytech.com/trade/shinny',
 	reconnectInterval: 3000,
