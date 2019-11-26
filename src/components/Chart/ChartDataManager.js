@@ -93,7 +93,7 @@ class ChartDM {
 	}
 
 	get klines() {
-		return (this._symbol && this._duration) ? this.tqsdk.get_klines(this._symbol, this._duration) : null
+		return (this._symbol && this._duration) ? this.tqsdk.get({name: 'klines', symbol: this._symbol, duration: this._duration}) : null
 	}
 
 	get left_id() {

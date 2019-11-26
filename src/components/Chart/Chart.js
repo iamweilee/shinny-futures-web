@@ -154,7 +154,7 @@ class Chart {
 			}
 
 			let plot = this.plots[key]
-			let paths = plot.path.calcPaths(l, r, this.chartDm.klines)
+			let paths = plot.path.calcPaths(l, r, this.chartDm.klines.data)
 			for (let key in paths) {
 				this.g.select(`path.${key}`).attr('d', paths[key])
 			}

@@ -74,7 +74,7 @@ function applyMixin(Vue) {
 			for (let eventName in tqevents) {
 				let eventsArr = tqevents[eventName]
 				eventsArr.forEach((fn) => {
-					tqsdk.removeEventListener(eventName, fn)
+					tqsdk.removeListener(eventName, fn)
 				})
 			}
 			delete tqVmEventMap[vm._uid];

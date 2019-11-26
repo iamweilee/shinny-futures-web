@@ -62,7 +62,7 @@ class Plot_SVG_G {
 	}
 
 	range(l, r) {
-		let list = this.chartDm.klines.slice(l, r + 1)
+		let list = this.chartDm.klines.data.slice(l, r + 1)
 		switch (this.type) {
 			case 'ohlc':
 			case 'candle':

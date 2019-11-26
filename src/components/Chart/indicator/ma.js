@@ -14,7 +14,7 @@ class MA {
 	calc(l, r, klines) {
 		for (let i = l; i <= r; i++) {
 			if (this.ma[i]) continue
-			this.ma[i] = ma_func(i, klines.close, this.params, this.ma)
+			this.ma[i] = ma_func(i, klines.data.map(item => item.close), this.params, this.ma)
 		}
 		return this.ma
 	}

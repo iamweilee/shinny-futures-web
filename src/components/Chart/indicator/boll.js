@@ -21,8 +21,8 @@ class BOLL {
 	calc(l, r, klines) {
 		for (let i = l; i <= r; i++) {
 			if (this.top[i] && this.bottom[i]) continue
-			this._mid[i] = MA(i, klines.close, this.n, this._mid)
-			this._std[i] = STDEV(i, klines.close, this.n, this._std)
+			this._mid[i] = MA(i, klines.data.map(item => item.close), this.n, this._mid)
+			this._std[i] = STDEV(i, klines.data.map(item => item.close), this.n, this._std)
 			this.top[i] = this._mid[i] + this.p * this._std[i]
 			this.bottom[i] = this._mid[i] - this.p * this._std[i]
 		}
