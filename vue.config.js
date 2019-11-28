@@ -1,4 +1,4 @@
-let publicPath = process.env.NODE_ENV === 'production' ? 'shinny-futures-web/' : '/'
+let publicPath = '/'; // process.env.NODE_ENV === 'production' ? 'shinny-futures-web/' : '/'
 
 module.exports = {
 	publicPath,

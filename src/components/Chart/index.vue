@@ -12,9 +12,11 @@
 			</Radio>
 		</RadioGroup>
 		&nbsp;
-		<Checkbox label="ma" v-model="indicators.ma3.show" v-on:on-change="onchange('ma3')">MA3</Checkbox>
+		<Checkbox label="ma" v-model="indicators.ma5.show" v-on:on-change="onchange('ma5')">MA5</Checkbox>
 		<Checkbox label="ma" v-model="indicators.ma10.show" v-on:on-change="onchange('ma10')">MA10</Checkbox>
-		<Checkbox label="ma" v-model="indicators.ma30.show" v-on:on-change="onchange('ma30')">MA30</Checkbox>
+		<Checkbox label="ma" v-model="indicators.ma20.show" v-on:on-change="onchange('ma20')">MA20</Checkbox>
+		<Checkbox label="ma" v-model="indicators.ma40.show" v-on:on-change="onchange('ma40')">MA40</Checkbox>
+		<Checkbox label="ma" v-model="indicators.ma60.show" v-on:on-change="onchange('ma60')">MA60</Checkbox>
 		<Checkbox label="boll" v-model="indicators.boll.show" v-on:on-change="onchange('boll')">BOLL</Checkbox>
 
 		<Dropdown v-on:on-click="onSelectedItem">
@@ -54,11 +56,11 @@
 				selectedPeriod: '1m',
 				selectedItem: 'candle',
 				indicators: {
-					'ma3': {
-						id: 'ma3',
+					'ma5': {
+						id: 'ma5',
 						name: 'ma',
 						type: 'ma',
-						params: 3,
+						params: 5,
 						show: true
 					},
 					'ma10': {
@@ -68,11 +70,25 @@
 						params: 10,
 						show: true
 					},
-					'ma30': {
-						id: 'ma30',
+					'ma20': {
+						id: 'ma20',
 						name: 'ma',
 						type: 'ma',
-						params: 30,
+						params: 20,
+						show: true
+					},
+					'ma40': {
+						id: 'ma40',
+						name: 'ma',
+						type: 'ma',
+						params: 40,
+						show: true
+					},
+					'ma60': {
+						id: 'ma60',
+						name: 'ma',
+						type: 'ma',
+						params: 60,
 						show: true
 					},
 					'boll': {
@@ -292,7 +308,7 @@
 	}
 
 	// ma
-	path.ma3 {
+	path.ma5 {
 		stroke: #1f77b4;
 	}
 
@@ -300,8 +316,16 @@
 		stroke: #aec7e8;
 	}
 
-	path.ma30 {
+	path.ma20 {
 		stroke: #ff7f0e;
+	}
+
+	path.ma40 {
+		stroke: #00AA00;
+	}
+
+	path.ma40 {
+		stroke: #9900FF;
 	}
 
 	// boll

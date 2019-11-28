@@ -6,6 +6,8 @@ import store from './store/index'
 import './plugins/iview.js'
 import tqsdk from './plugins/tqsdk.js'
 
+
+
 tqsdk.on('ready', function () {
 	store.commit('SET_TAGS_QOUTES_MAP', tqsdk.quotesInfo)
 })
